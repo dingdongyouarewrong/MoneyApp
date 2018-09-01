@@ -299,7 +299,6 @@ public class Main_Activity extends AppCompatActivity {
 
         int i=0;
         i+=1;
-
         if (isStartTimer){
             StartTimer();
         } else {
