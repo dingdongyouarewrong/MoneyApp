@@ -304,7 +304,6 @@ public class Main_Activity extends AppCompatActivity {
             StartTimer();
         } else {
             timeLeftMillis = 86400000 * days;
-
         }
 
         Toast.makeText(Main_Activity.this,"дней "+String.valueOf(days)+" дата "+String.valueOf(currentDate),Toast.LENGTH_LONG ).show();//потом пригодится
