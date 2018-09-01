@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offwhite"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <TextView
+
+            android:id="@+id/descript"
+            android:layout_width="221dp"
+            android:layout_height="62dp"
+            android:gravity="center"
+            android:text="сколько денег вы сняли:"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/cashtocard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corners1"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+
+</LinearLayout>

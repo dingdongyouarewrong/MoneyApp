@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray"
+    android:foregroundGravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/redcorners"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:padding="10dp"
+                android:text="@string/spending_this_week"
+                android:textColor="@color/blackred"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/spending_week_sum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical|end"
+                android:padding="10dp"
+                android:textColor="@color/blackred"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <View
+
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="3000"
+                android:background="@color/white"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical|fill_horizontal"
+                android:padding="10dp"
+                android:text="@string/spending_this_month"
+                android:textColor="@color/blackred"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/spending_month_sum"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical|end"
+                android:padding="10dp"
+                android:textColor="@color/blackred"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="***"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="onClickSpent"
+                android:text="Нажмите, чтобы увидеть все траты"
+                android:textColor="@color/blackred"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animationCache="true"
+            android:onClick="onClickSpent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left|start"
+                    android:padding="5dp"
+                    android:text="@string/name"
+                    android:textColor="@color/blackred" />
+
+                <TextView
+                    android:id="@+id/element_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|end"
+                    android:textColor="@color/blackred"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="3000"
+                    android:background="@color/white"
+                    android:padding="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="5"
+                    android:gravity="left|start"
+                    android:padding="5dp"
+                    android:text="@string/sum"
+                    android:textColor="@color/blackred" />
+
+                <TextView
+                    android:id="@+id/element_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|end"
+
+                    android:textColor="@color/blackred"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+
+                <View
+
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="3000"
+                    android:background="@color/white"
+                    android:padding="5dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="5"
+                    android:gravity="left|start"
+                    android:padding="5dp"
+                    android:text="@string/Category"
+                    android:textColor="@color/blackred" />
+
+
+                <TextView
+                    android:id="@+id/element_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|end"
+                    android:textColor="@color/blackred"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="3000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/greencorners"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="onClickEarn"
+                android:paddingTop="10dp"
+                android:text="Нажмите, чтобы увидеть все поступления"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickEarn"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="5"
+                    android:gravity="left|start"
+                    android:padding="5dp"
+                    android:text="@string/name"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/element_getName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|end"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+
+                <View
+
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="3000"
+                    android:background="@color/white"
+                    android:padding="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="5"
+                    android:gravity="left|start"
+                    android:padding="5dp"
+                    android:text="@string/sum"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/element_getSum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|end"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp">
+
+                <View
+
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="3000"
+                    android:background="@color/white"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/miss"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Получено денег за эту неделю:"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/weekGetSum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical|end"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <View
+
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="3000"
+                android:background="@color/white"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/black">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical|fill_horizontal"
+                android:padding="10dp"
+                android:text="Получено денег за этот месяц:"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/mothGetSum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical|end"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+

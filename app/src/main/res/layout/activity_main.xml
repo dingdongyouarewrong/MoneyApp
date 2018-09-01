@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentPanel"
+    android:background="@color/offwhite"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:id="@+id/clickLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+
+            android:focusable="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:hapticFeedbackEnabled="false"
+            android:lineSpacingExtra="0dp"
+            android:text="497.55"
+            android:textColor="@color/red"
+            android:textSize="130sp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/currency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|center_vertical|fill_vertical|center_horizontal"
+            android:paddingBottom="0dp"
+            android:text="@string/current"
+            android:textColor="@color/red"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/cashnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="start"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+
+            android:text="500"
+            android:textColor="@android:color/holo_blue_dark"
+            app:fontFamily="@font/rob" />
+
+        <TextView
+            android:id="@+id/cardnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="end"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="200"
+
+            android:textColor="@android:color/holo_red_dark"
+            app:fontFamily="@font/rob" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <View
+            android:id="@+id/redline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="8000"
+            android:background="@android:color/holo_blue_dark">
+        </View>
+
+        <View
+            android:id="@+id/blueline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3000"
+            android:background="@android:color/holo_red_dark">
+        </View>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/shi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/cash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="start"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+
+            android:text="@string/card"
+            android:textColor="@android:color/holo_blue_dark"
+            app:fontFamily="@font/rob" />
+
+        <TextView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="end"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/cash"
+
+            android:textColor="@android:color/holo_red_dark"
+            app:fontFamily="@font/rob" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/beforeSalary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/left_before_payment"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/beforeSalaryLeft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:text="20:20:20"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fstLin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <Button
+
+            android:id="@+id/inShop"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+
+            android:background="@drawable/corners1"
+            android:onClick="onClick"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            app:fontFamily="@font/avenir"
+
+        android:shadowRadius="5"
+            android:text="@string/toShop"
+
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingRight="5dp">
+
+            <Button
+                android:id="@+id/getMoneyButton"
+
+                style="?android:attr/borderlessButtonStyle"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/corners1"
+                android:text="получение\n денег"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:fontFamily="@font/avenir" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/spendMoneyButton"
+
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/corners1"
+                android:paddingLeft="5dp"
+                android:text="@string/spenidng"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:fontFamily="@font/avenir" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingRight="5dp">
+
+            <Button
+                android:id="@+id/ATM"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/corners1"
+                android:text="@string/ATM"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+
+                app:fontFamily="@font/avenir" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/statisticsButton"
+
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/corners1"
+                android:paddingLeft="5dp"
+                android:text="статистика"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:fontFamily="@font/avenir" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <Button
+
+            android:id="@+id/settings"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@drawable/corners1"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="@string/settings"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/avenir" />
+    </LinearLayout>
+
+
+</LinearLayout>
+</ScrollView>
+
+
+

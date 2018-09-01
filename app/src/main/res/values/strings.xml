@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">MoneyApp</string>
+    <string name="enter_name">Название товара</string>
+    <string name="enter_price">0</string>
+    <string name="add">добавить</string>
+    <string name="testtext">dawd</string>
+    <string name="clear">очистить</string>
+    <string name="check">чек</string>
+    <string name="cash">наличные</string>
+    <string name="card">безналичные</string>
+    <string name="current">рублей</string>
+    <string name="howmuch">сколько у вас денег</string>
+    <string name="spenidng">трата\n денег</string>
+    <string name="toShop">в магазин</string>
+    <string name="settings">настройки</string>
+    <string name="by_card">По карте</string>
+    <string name="confirm">подтвердить</string>
+    <string name="sum_is">сумма:</string>
+    <string name="spending_name">название траты:</string>
+    <string name="category">категория:</string>
+    <string name="spending_this_month">Потрачено за этот месяц:</string>
+    <string name="spending_this_week">Потрачено за эту неделю:</string>
+    <string name="Category">Категория:</string>
+    <string name="sum">Сумма:</string>
+    <string name="name">Имя:</string>
+    <string name="miss">***</string>
+    <string name="left_before_payment">До зарплаты осталось:</string>
+    <string name="ATM">банкомат</string>
+    <string name="Rubles">Рубли</string>
+    <string name="Dollars">Доллары</string>
+    <string name="Euro">Евро</string>
+    <string name="Grivens">Гривны</string>
+
+    <string-array name="auto_complete">
+        <item>другое</item>
+        <item>продукты</item>
+        <item>товары для детей</item>
+        <item>косметика</item>
+        <item>бытовая химия</item>
+        <item>техника</item>
+        <item>электроника</item>
+        <item>товары для дома</item>
+        <item>одежда</item>
+        <item>обувь</item>
+        <item>аксессуары</item>
+        <item>зоотовары</item>
+        <item>товары для авто</item>
+        <item>спорт и отдых</item>
+        <item>товары для дачи</item>
+        <item>подарки</item>
+        </string-array>
+</resources>

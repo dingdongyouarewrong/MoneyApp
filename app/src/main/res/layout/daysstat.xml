@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View android:layout_width="fill_parent" android:id="@+id/focus_view" android:layout_height="0dp" android:focusable="true" android:focusableInTouchMode="true"><requestFocus/>
+    </View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Статистика за день:"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/daystat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="-999.05"
+        android:textColor="@color/mainTextColor"
+        android:textSize="120sp"
+        android:fontFamily="@font/rob"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/currencyDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|center_vertical|fill_vertical|center_horizontal"
+            android:paddingBottom="0dp"
+            android:text="@string/current"
+            android:fontFamily="@font/rob"
+            android:textColor="@color/red"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal|center"
+            android:text="Потрачено:"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/spentThisDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:text="20"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Получено:"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/earnThisDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:text="20"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:foregroundGravity="bottom"
+        android:gravity="bottom"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="25dp">
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/weekStat"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+
+            android:background="@drawable/corners1"
+            android:text="статистика за больший срок" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:text="Потяните вверх чтобы увидеть траты за сегодня"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/arrow_up_float" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/arrow_up_float" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/arrow_up_float" />
+
+    </LinearLayout>
+
+
+    <ListView
+        android:padding="15dp"
+        android:id="@+id/statListView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:dividerHeight="@dimen/padding_small"
+        android:divider="@android:color/transparent"
+        tools:listitem="@layout/spending_element">
+
+    </ListView>
+
+
+</LinearLayout>
+</ScrollView>
