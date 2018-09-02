@@ -19,6 +19,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -88,7 +89,6 @@ public class Main_Activity extends AppCompatActivity {
 
         prefs = getSharedPreferences("com.donny.MoneyApp", MODE_PRIVATE);
         prefs.contains("com.donny.MoneyApp");
-        SharedPreferences.Editor editor = prefs.edit();
 
 
         checkFirstRun();
@@ -107,6 +107,7 @@ public class Main_Activity extends AppCompatActivity {
         prefs.edit().putFloat("savedCash", cash).apply();
         card = prefs.getFloat("savedCard",0);
         prefs.edit().putFloat("savedCard", card).apply();
+        salary = prefs.getFloat("savedSalary",0);
 
         notify = prefs.getBoolean("notify",true);
 
@@ -259,6 +260,7 @@ public class Main_Activity extends AppCompatActivity {
         currentMin = Integer.valueOf(timeFormat.format(calendar.getTime()));
         timeFormat = new SimpleDateFormat("yy");
         long year = (valueOf(timeFormat.format(calendar.getTime())));
+
         currentDate = valueOf(timeFormat.format(calendar.getTime()));
         int days;
         if ((currentMonth==0) && (currentDay==0) && (currentHour==0) && (currentMin==0)) {
@@ -267,23 +269,17 @@ public class Main_Activity extends AppCompatActivity {
 
         switch (currentMonth) {
 
-            case 1: days = 31;
-                break;
+            case 1: days = 31;break;
 
-            case 3: days = 31;
-                break;
+            case 3: days = 31;break;
 
-            case 5: days = 31;
-                break;
+            case 5: days = 31;break;
 
-            case 7: days = 31;
-                break;
+            case 7: days = 31;break;
 
-            case 8: days = 31;
-                break;
+            case 8: days = 31;break;
 
-            case 10: days = 31;
-                break;
+            case 10: days = 31;break;
 
             case 2: if ((year==2024) || (year==2044)) {
                 days = 29;
@@ -300,14 +296,21 @@ public class Main_Activity extends AppCompatActivity {
         int i=0;
         i+=1;
         if (isStartTimer){
+
+            timeLeftMillis = ((days - currentDay)*86400000L) + (86400000L - (currentHour*3600000 + 60000*currentMin + 1000*currentSec));
+            timeLeftMillis+= daysPlus*86400000;
             StartTimer();
-        } else {
-            timeLeftMillis = 86400000 * days;
         }
 
-        Toast.makeText(Main_Activity.this,"дней "+String.valueOf(days)+" дата "+String.valueOf(currentDate),Toast.LENGTH_LONG ).show();//потом пригодится
-        timeLeftMillis = ((days - currentDate)*86400000) + (86400000 - (currentHour*3600000 + 60000*currentMin + 1000*currentSec));
-        timeLeftMillis+= daysPlus*86400000;
+        else {
+            timeLeftMillis = ((days - currentDay)*86400000L) + (86400000L - (currentHour*3600000 + 60000*currentMin + 1000*currentSec));
+            timeLeftMillis+= daysPlus*86400000;
+
+
+            StartTimer();
+        }
+
+
     }
 
     protected void checkFirstRun() {
@@ -332,9 +335,10 @@ public class Main_Activity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 isStartTimer = false;
-                //putValue();
-
-
+                putValue();
+                Log.e("isStart", String.valueOf(isStartTimer));
+//                Intent intent = getIntent();
+//                startActivity(intent);
                 //startActivity(intent);
                 checktime();
             }

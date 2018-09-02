@@ -62,8 +62,6 @@ public class SalaryDialogAct extends Activity {
                 editor.putFloat("savedCash", Main_Activity.cash).apply();
                 editor.putFloat("savedCard", Main_Activity.card).apply();
                 editor.putFloat("savedSalary", Main_Activity.salary).apply();
-                editor.putInt("savedDateOfSalary", Main_Activity.dateOfSalary).apply();
-//                editor.putFloat("savedBalance", Main_Activity.balance).apply();
                 prefs.edit().putBoolean("firstrun", false).apply();
                 Intent intent = new Intent(SalaryDialogAct.this,Main_Activity.class);
                 startActivity(intent);
@@ -74,15 +72,4 @@ public class SalaryDialogAct extends Activity {
 
     }
 
-
-
-    public void toMain(View view) {
-
-    }
-
-    /*public long getSalary() {
-        Toast.makeText(SalaryDialogAct.this, "первый запуск",Toast.LENGTH_LONG ).show();
-
-        return salary;
-    }*/
 }
