@@ -55,7 +55,6 @@ public class SalaryDialogAct extends Activity {
                 Main_Activity.salary = valueOf(userSalary.getText().toString());
                 Main_Activity.card = valueOf(card.getText().toString());
                 Main_Activity.cash = valueOf(cash.getText().toString());
-                //Main_Activity.balance = Main_Activity.card + Main_Activity.cash;
                 SharedPreferences.Editor editor = prefs.edit();
 
 

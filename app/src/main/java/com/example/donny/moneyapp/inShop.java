@@ -43,6 +43,7 @@ public class inShop extends AppCompatActivity {
     long currentWeek, currentMonth, currentDay, currentDate;
     ItemsAdapter adapter;
     SQLiteDatabase database;
+    TextView sum;
 
     class Item {
         String name;
@@ -75,7 +76,7 @@ public class inShop extends AppCompatActivity {
         final EditText price = findViewById(R.id.price);
         final Button add = findViewById(R.id.add);
         final ListView items = findViewById(R.id.items);
-        final TextView sum = findViewById(R.id.sum);
+        sum = findViewById(R.id.sum);
         adapter = new ItemsAdapter();
         final Button check = findViewById(R.id.checkButton);
 //        final Button clear = findViewById(R.id.clearButton);
@@ -89,39 +90,7 @@ public class inShop extends AppCompatActivity {
         items.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() { //////
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-                final AlertDialog.Builder builder = new AlertDialog.Builder(inShop.this);
-                builder.setMessage("Удалить товар?")
-                        .setCancelable(true)
-                        .setPositiveButton("Да", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Item itemtobase = adapter.getItem(position);
-                                adapter.remove(adapter.getItem(position));
-                                if (itemtobase != null) {
-                                    sums -= itemtobase.price;
-                                }
-                                int cypher = (int)sums % 10;
-
-                                if (cypher == 1) {
-                                    sum.setText("Вы заплатите: ".concat(String.valueOf(sums)).concat(" рубль"));
-                                } else if ((cypher > 1) && (cypher < 5)) {
-                                    sum.setText("Вы заплатите: ".concat(String.valueOf(sums)).concat(" рубля"));
-                                } else if ((cypher == 0) || (cypher >= 5)) {
-                                    sum.setText("Вы заплатите: ".concat(String.valueOf(sums)).concat(" рублей"));
-                                }
-                                Toast.makeText(inShop.this,"Добавьте товар",Toast.LENGTH_SHORT ).show();
-
-
-                            }
-                        })
-                        .setNegativeButton("Нет", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.cancel();
-                            }
-                        });
-                AlertDialog alert = builder.create();
-                alert.show();
+                showDeleteDialog(position);
                 return false;
             }
         });
@@ -209,6 +178,7 @@ public class inShop extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         Main_Activity.cash-=sums;
                         prefs.edit().putFloat("savedCash", Main_Activity.cash).apply();
+                        dbPut();
                         Intent intent = new Intent(inShop.this,Main_Activity.class);
                         startActivity(intent);
                     }
@@ -276,5 +246,38 @@ public class inShop extends AppCompatActivity {
         }
     }
 
+    public void showDeleteDialog(final int position) {  ///выводит диалог с вопросом о средстве оплаты
+        final AlertDialog.Builder builder = new AlertDialog.Builder(inShop.this);
+        builder.setMessage("Удалить товар?")
+                .setCancelable(true)
+                .setPositiveButton("Да", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Item itemtobase = adapter.getItem(position);
+                        adapter.remove(adapter.getItem(position));
+                        if (itemtobase != null) {
+                            sums -= itemtobase.price;
+                        }
+                        int cypher = (int)sums % 10;
 
+                        if (cypher == 1) {
+                            sum.setText("Вы заплатите: ".concat(String.valueOf(sums)).concat(" рубль"));
+                        } else if ((cypher > 1) && (cypher < 5)) {
+                            sum.setText("Вы заплатите: ".concat(String.valueOf(sums)).concat(" рубля"));
+                        } else if ((cypher == 0) || (cypher >= 5)) {
+                            sum.setText("Вы заплатите: ".concat(String.valueOf(sums)).concat(" рублей"));
+                        }
+
+
+                    }
+                })
+                .setNegativeButton("Нет", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
 }

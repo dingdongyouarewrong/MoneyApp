@@ -30,6 +30,8 @@
     <string name="Dollars">Доллары</string>
     <string name="Euro">Евро</string>
     <string name="Grivens">Гривны</string>
+    <string name="savings">Накопления</string>
+    <string name="currency">валюта</string>
 
     <string-array name="auto_complete">
         <item>другое</item>

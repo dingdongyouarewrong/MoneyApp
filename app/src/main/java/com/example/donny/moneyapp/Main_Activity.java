@@ -82,7 +82,6 @@ public class Main_Activity extends AppCompatActivity {
 
         nm = (NotificationManager)getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
-        Toast.makeText(Main_Activity.this,valueOf((long) salary).toString(),Toast.LENGTH_LONG ).show();//потом пригодится
 
         Typeface typefaceMain = ResourcesCompat.getFont(Main_Activity.this, R.font.rob);
         Typeface typefaceBeforeSalary = ResourcesCompat.getFont(Main_Activity.this, R.font.avenir);
@@ -336,10 +335,6 @@ public class Main_Activity extends AppCompatActivity {
             public void onFinish() {
                 isStartTimer = false;
                 putValue();
-                Log.e("isStart", String.valueOf(isStartTimer));
-//                Intent intent = getIntent();
-//                startActivity(intent);
-                //startActivity(intent);
                 checktime();
             }
         }.start();
@@ -469,6 +464,10 @@ public class Main_Activity extends AppCompatActivity {
         database.close();
 
 //                }
+
+    }
+
+    public void startSave(View v) {
 
     }
 
