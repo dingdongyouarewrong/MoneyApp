@@ -168,6 +168,7 @@ public class Main_Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Main_Activity.this,inShop.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -176,6 +177,7 @@ public class Main_Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Main_Activity.this, Earning.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -185,6 +187,8 @@ public class Main_Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Main_Activity.this, Spending.class);
                 startActivity(intent);
+                finish();
+
             }
         });
 
@@ -200,6 +204,8 @@ public class Main_Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Main_Activity.this,daysstat.class);
                 startActivity(intent);
+                finish();
+
             }
         });
 
@@ -208,6 +214,8 @@ public class Main_Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Main_Activity.this, settings.class);
                 startActivity(intent);
+                finish();
+
             }
         });
     }
@@ -223,6 +231,8 @@ public class Main_Activity extends AppCompatActivity {
                         intent.putExtra("cashCard", false);
 
                         startActivity(intent);
+                        finish();
+
 
                     }
                 })
@@ -233,6 +243,8 @@ public class Main_Activity extends AppCompatActivity {
                         Intent intent = new Intent(Main_Activity.this,ATMDialog.class);
                         intent.putExtra("cashCard", true);
                         startActivity(intent);
+                        finish();
+
                     }
                 });
         AlertDialog alert = builder.create();
@@ -315,7 +327,8 @@ public class Main_Activity extends AppCompatActivity {
     protected void checkFirstRun() {
         if (prefs.getBoolean("firstrun", true)) {//если первый запуск - веселимся с окном
             Intent intent = new Intent(Main_Activity.this,startOneTime.class);
-            startActivity(intent);
+            startActivity(intent);                finish();
+
         }
     }
 
@@ -467,8 +480,5 @@ public class Main_Activity extends AppCompatActivity {
 
     }
 
-    public void startSave(View v) {
-
-    }
 
 }

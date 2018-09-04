@@ -139,6 +139,8 @@ public class Earning extends AppCompatActivity {
                         prefs.edit().putFloat("savedCash", Main_Activity.cash).apply();
                         Intent intent = new Intent(Earning.this,Main_Activity.class);
                         startActivity(intent);
+                        finish();
+
                     }
                 });
         AlertDialog alert = builder.create();

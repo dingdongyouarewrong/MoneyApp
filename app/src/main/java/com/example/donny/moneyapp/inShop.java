@@ -116,7 +116,6 @@ public class inShop extends AppCompatActivity {
             public void onClick(View v) {
                 if (!((price.getText().toString().length() == 0) || (name.getText().toString().length() == 0))) {
                     cont();
-                    Toast.makeText(inShop.this, toString().valueOf(sums),Toast.LENGTH_SHORT ).show();
                 }
                 else {
                     Toast.makeText(inShop.this,"введите корректное значения",Toast.LENGTH_SHORT ).show();
@@ -170,6 +169,8 @@ public class inShop extends AppCompatActivity {
                         dbPut();
                         Intent intent = new Intent(inShop.this,Main_Activity.class);
                         startActivity(intent);
+                        finish();
+
 
                     }
                 })
@@ -181,6 +182,8 @@ public class inShop extends AppCompatActivity {
                         dbPut();
                         Intent intent = new Intent(inShop.this,Main_Activity.class);
                         startActivity(intent);
+                        finish();
+
                     }
                 });
         AlertDialog alert = builder.create();

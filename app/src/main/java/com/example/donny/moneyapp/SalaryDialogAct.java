@@ -64,6 +64,8 @@ public class SalaryDialogAct extends Activity {
                 prefs.edit().putBoolean("firstrun", false).apply();
                 Intent intent = new Intent(SalaryDialogAct.this,Main_Activity.class);
                 startActivity(intent);
+                finish();
+
                 }
 
             }

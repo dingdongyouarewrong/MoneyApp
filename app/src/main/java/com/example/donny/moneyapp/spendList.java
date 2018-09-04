@@ -24,15 +24,15 @@ public class spendList extends Activity {
 
 
     class SpendingOne {
-        String name;
-        String category;
-        double sum;
+            String name;
+            String category;
+            double sum;
 
-        SpendingOne(String name, String category, double sum) {
-            this.name = name;
-            this.category = category;
-            this.sum = sum;
-        }
+            SpendingOne(String name, String category, double sum) {
+                this.name = name;
+                this.category = category;
+                this.sum = sum;
+            }
     }
 
     @Override

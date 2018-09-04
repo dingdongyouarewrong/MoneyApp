@@ -77,6 +77,8 @@ public class daysstat extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(daysstat.this, Statistics.class);
                 startActivity(intent);
+                finish();
+
             }
         });
 

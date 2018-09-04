@@ -19,6 +19,8 @@ public class startOneTime extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(startOneTime.this,SalaryDialogAct.class);
                 startActivity(intent);
+                finish();
+
             }
         });
 

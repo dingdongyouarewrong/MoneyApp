@@ -104,6 +104,8 @@ public class Spending extends AppCompatActivity {
                         prefs.edit().putFloat("savedCash", Main_Activity.card).apply();
                         Intent intent = new Intent(Spending.this,Main_Activity.class);
                         startActivity(intent);
+                        finish();
+
 
                     }
                 })
@@ -115,6 +117,8 @@ public class Spending extends AppCompatActivity {
                         prefs.edit().putFloat("savedCash", Main_Activity.cash).apply();
                         Intent intent = new Intent(Spending.this,Main_Activity.class);
                         startActivity(intent);
+                        finish();
+
 
                     }
                 });

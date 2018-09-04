@@ -76,6 +76,8 @@ public class ATMDialog extends AppCompatActivity{
                         prefs.edit().putFloat("savedCard", Main_Activity.card).apply();
                         Intent intentStart = new Intent(ATMDialog.this, Main_Activity.class);
                         startActivity(intentStart);
+                        finish();
+
 
                     }
                 }
